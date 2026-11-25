@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h1 class="display-3 text-center mb-4">Catalogo de Productos</h1>
+
+    <div class="row g-4">
+        @for(t of products(); track $index){
+           <app-productcard 
+           [product]="t"
+           (nameDelete)="deleteProduct($event)"
+           >
+           </app-productcard>
+        }
+
+    </div>
+
+</div>
